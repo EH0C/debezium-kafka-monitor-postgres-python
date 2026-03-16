@@ -79,14 +79,14 @@ docker ps
 curl -s http://localhost:8083/connectors/postgres-connector/status
 
 # View live alerts
-docker logs -f kafkaproject-monitor-1
+docker logs -f cdc-monitor
 
 # Insert a test zero-amount order
-docker exec kafkaproject-postgres-1 psql -U admin -d yourdb \
+docker exec cdc-postgres psql -U admin -d yourdb \
   -c "INSERT INTO orders (customer_id, product, amount) VALUES (1, 'test', 0.00);"
 
 # List Kafka topics
-docker exec kafkaproject-kafka-1 kafka-topics --bootstrap-server localhost:9092 --list
+docker exec cdc-kafka kafka-topics --bootstrap-server localhost:9092 --list
 ```
 
 ## Project Structure
