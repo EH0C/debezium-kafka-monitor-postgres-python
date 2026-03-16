@@ -92,7 +92,7 @@ docker exec kafkaproject-kafka-1 kafka-topics --bootstrap-server localhost:9092 
 ## Project Structure
 
 ```
-kafkaproject/
+debezium-kafka-monitor-postgres-python/
 ├── docker-compose.yml     # Full stack definition
 ├── connector.json         # Debezium PostgreSQL connector config
 ├── monitor_orders.py      # Python Kafka consumer — alerts on amount = 0
